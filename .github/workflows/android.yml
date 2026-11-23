@@ -29,6 +29,11 @@ jobs:
       - name: Install web dependencies
         working-directory: web
         run: npm install
+      - name: Bundle ONNX Runtime WebAssembly files
+        run: |
+          mkdir -p web/public/wasm
+          cp web/node_modules/onnxruntime-web/dist/*.wasm web/public/wasm/
+          cp web/node_modules/onnxruntime-web/dist/*.mjs web/public/wasm/ || true
       - name: Download offline translation models
         run: |
           python -m pip install --upgrade huggingface_hub
