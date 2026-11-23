@@ -32,7 +32,7 @@ jobs:
       - name: Download offline translation models
         run: |
           python -m pip install --upgrade huggingface_hub
-          python scripts/download_models.py
+          python web/scripts/download_models.py
       - name: Build web application
         working-directory: web
         run: npm run build
