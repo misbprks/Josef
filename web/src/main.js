@@ -6,6 +6,7 @@ env.allowRemoteModels = false;
 env.localModelPath = './models/';
 env.backends.onnx.wasm.numThreads = 1;
 env.backends.onnx.wasm.proxy = false;
+env.backends.onnx.wasm.wasmPaths = new URL('./wasm/', window.location.href).href;
 
 const root = document.querySelector('#app');
 root.innerHTML = `
