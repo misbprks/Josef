@@ -15,6 +15,5 @@ for model in MODELS:
         repo_id=model,
         local_dir=str(destination),
         allow_patterns=ALLOW,
-        local_dir_use_symlinks=False,
     )
 print("Model download step completed.")
